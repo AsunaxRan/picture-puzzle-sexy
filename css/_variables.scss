@@ -1,0 +1,29 @@
+$color-bg-aside: #333;
+$color-general: #fff;
+$color-black: #000;
+$color-shadow: rgba(0,0,0,0.5);
+$color-easy: #1976d2; // btn-back
+$color-medium: #fb8c00;
+$color-hard: #d32f2f;
+$color-play: #4CAF50; // btn-replay
+$color-gray: #d1d1d1;
+
+@mixin btn($color) {
+	background-color: $color;
+	border: 1px solid $color;
+}
+
+@mixin btn-hover($bg, $text) {
+	background-color: $bg;
+	color: $text;
+}
+
+@mixin btn-click($bg, $text) {
+	background-color: $bg !important;
+	color: $text !important;
+}
+
+@mixin t-one($color, $size) {
+	color: $color;
+	font-size: $size;
+}

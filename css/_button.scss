@@ -1,0 +1,44 @@
+button {
+	font-family: "open sans";
+	text-transform: uppercase;
+}
+
+button[role="prepare"] {
+	color: $color-general;
+	font-size: 18px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	&:first-child {
+		@include btn($color-easy);
+	}
+	&:nth-child(2) {
+		@include btn($color-medium);
+	}
+	&:last-child {
+		@include btn($color-hard);
+	}
+} 
+
+button[role="control"] {
+	margin-top: 20px;
+	width: 310px;
+	height: 40px;
+	line-height: 40px;
+	@include t-one($color-general, 24px);
+	font-weight: bold;
+}
+
+#play, #replay {
+	@include btn($color-play);
+	&:hover {
+		@include btn-hover($color-general, $color-play);
+	}
+}
+
+#back {
+	@include btn($color-easy);
+	&:hover {
+		@include btn-hover($color-general, $color-easy);
+	}
+}

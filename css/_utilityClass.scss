@@ -1,0 +1,15 @@
+.btn_level_on {
+	&:first-child {
+		@include btn-click($color-general, $color-easy);
+	}
+	&:nth-child(2) {
+		@include btn-click($color-general, $color-medium);
+	}
+	&:last-child {
+		@include btn-click($color-general, $color-hard);
+	}
+}
+
+.btn_theme_on {
+	filter: grayscale(0) !important;
+}

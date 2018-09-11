@@ -1,0 +1,122 @@
+body {
+	background-image: url('../img/bg.jpg');
+}
+
+.backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: $color-shadow;
+	display: none;
+
+	.modal {
+		z-index: 11;
+		display: none;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10%;
+		width: 35%;
+		height: auto;
+		background-color: $color-general;
+		padding: 10px;
+		border: 1px solid transparent;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px 5px $color-gray;
+		text-align: center;
+		//background-image: url('../img/bg-modal.png');
+		div {
+			text-align: right;
+			border-bottom: 1px solid $color-gray;
+			span {
+				cursor: pointer;
+				font-size: 30px;
+			}
+		}
+		section {
+			p {
+				@include t-one($color-hard, 50px);
+				font-family: "bloody";
+				padding: 20px;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+	}
+} // .backdrop
+
+.main {
+	display: inline-block;
+	width: 75%;
+	float: right;
+	.themes {
+		text-align: center;
+		.theme {
+			width: 450px;
+			height: 300px;
+			display: inline-block;
+			overflow: hidden;
+			margin: 20px;
+			cursor: pointer;
+			border: none;
+			filter: grayscale(100);
+			img {
+				width: 100%;
+				height: auto;
+			}
+			&:hover {
+				filter: grayscale(0);
+			}
+		}
+	} // .show
+
+	.puzzle {
+		display: none;
+		margin: 20px auto;
+		width: 900px;
+		height: 600px;
+		overflow: hidden;
+		box-sizing: content-box;
+		&:before, &:after {
+			clear: both;
+		}
+		.piece {
+			display: inline-block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			border: 1px solid black;
+			box-sizing: border-box;
+			position: relative;
+			overflow: hidden;
+			transition: .3s all ease;
+			&[data-size="6"] {
+				width: 300px; height: 300px;
+			}
+			&[data-size="24"] {
+				width: 150px; height: 150px;
+			}
+			&[data-size="54"] {
+				width: 100px; height: 100px;
+			}
+			img {
+				position: absolute;
+			}
+			&[data-angle="0"] {
+				transform: rotate(0deg);
+			}
+			&[data-angle="90"] {
+				transform: rotate(90deg);
+			}
+			&[data-angle="180"] {
+				transform: rotate(180deg);
+			}
+			&[data-angle="270"] {
+				transform: rotate(270deg);
+			}
+		} // .piece
+
+	} // .puzzle
+}

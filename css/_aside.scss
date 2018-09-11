@@ -1,0 +1,61 @@
+aside#info {
+	background-color: $color-bg-aside;
+	width: 25%;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	display: inline-block;
+	float: left;
+
+	header#header {
+		.logo {
+			color: $color-general;
+			h1 {
+				font-family: "Puzzle";
+				font-size: 60px;
+				margin-bottom: 30px;
+			}
+		} // .logo
+	}
+
+	.control {
+		font-family: "open sans";
+		.before-game {
+			p {
+				color: $color-general;
+				font-size: 20px;
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}
+		}
+		.in-game {
+			display: none;
+			color: $color-general;
+			p {
+				font-size: 24px;
+			}
+			p:first-child {
+				margin-top: 30px;
+			}
+			.btn-control {
+				margin-top: 30px;
+			} // .choices	
+		}
+		
+	} // .control
+
+	footer#footer {
+		position: absolute;
+		bottom: 0;
+		color: $color-general;
+		width: 100%;
+		padding: 10px;
+		a {
+			color: $color-general;
+			&:hover {
+				color: $color-gray;
+			}
+		}
+	} // #footer
+	
+}
